@@ -1,0 +1,40 @@
+:root {
+  --verde: #2f6f5e;
+  --papel: #f7f3ea;
+  --texto: #1f2430;
+  --mute: #646b7d;
+  --borde: #e2dccd;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--texto);
+  background: var(--papel);
+  min-height: 100vh;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+h1, h2, p { margin: 0; }
+button { font: inherit; cursor: pointer; }
+
+nav { background: var(--verde); padding: 14px 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; font-family: system-ui, sans-serif; }
+nav a { color: white; font-weight: 700; text-decoration: none; }
+nav .derecha { margin-left: auto; display: flex; gap: 16px; align-items: center; color: white; }
+nav button { background: white; color: var(--verde); border: 0; border-radius: 999px; padding: 6px 14px; font-weight: 700; }
+
+main { max-width: 900px; margin: 0 auto; padding: 24px 20px 60px; display: grid; gap: 18px; }
+.error { color: #a01c2c; font-weight: 600; font-family: system-ui, sans-serif; }
+.vacio { color: var(--mute); }
+
+.lista { display: grid; gap: 10px; }
+.libro { background: white; border: 1px solid var(--borde); border-radius: 12px; padding: 12px 16px; display: flex; gap: 12px; align-items: center; }
+.libro .datos { flex: 1; }
+.libro h2 { font-size: 18px; }
+.libro p { color: var(--mute); font-size: 14px; font-family: system-ui, sans-serif; }
+.libro .leido { color: var(--verde); font-weight: 700; }
+
+button.primario, .libro button { border: 0; border-radius: 999px; padding: 8px 16px; background: var(--verde); color: white; font-weight: 700; font-family: system-ui, sans-serif; }
+button.peligro { border: 2px solid #a01c2c; background: white; color: #a01c2c; border-radius: 999px; padding: 8px 16px; font-weight: 700; justify-self: start; font-family: system-ui, sans-serif; }
+
+form { background: white; border: 1px solid var(--borde); border-radius: 14px; padding: 18px; display: grid; gap: 10px; font-family: system-ui, sans-serif; }
+form.angosto { max-width: 380px; width: 100%; justify-self: center; }
+form.linea { grid-template-columns: 2fr 2fr 1fr auto; align-items: center; }
+form input { width: 100%; min-width: 0; font: inherit; padding: 8px 10px; border: 2px solid var(--borde); border-radius: 10px; }
+@media (max-width: 640px) { form.linea { grid-template-columns: 1fr; } }
